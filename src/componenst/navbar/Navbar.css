@@ -1,0 +1,119 @@
+.container__menu {
+  width: 100%;
+}
+
+header {
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+header nav ul {
+  position: fixed;
+  top: 2.9rem;
+  left: 19rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.active {
+  color: red;
+}
+
+.container__iconMenu {
+  display: none;
+}
+
+.iconCloseMenu {
+  display: none;
+}
+
+.iconOpenMenu {
+  display: none;
+}
+
+.iconos__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.imgAvatar {
+  width: 30px;
+}
+
+header nav.open {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 840px) {
+  header nav  ul {
+    left: 15rem;
+  }
+}
+
+
+
+@media screen and (max-width: 760px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    background-color: rgb(242, 240, 238);
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  header nav ul {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: start;
+    left: 0.5rem;
+    gap: 1rem;
+  }
+
+  .container__iconMenu {
+    display: block;
+    z-index: 1000;
+  }
+
+  .container__iconMenu .iconOpenMenu{
+    display: block;
+  }
+
+  .container__iconMenu .iconCloseMenu{
+    display: block;
+    z-index: 999;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  header nav {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 450px) {
+  header nav {
+    width: 50%;
+  }
+}
