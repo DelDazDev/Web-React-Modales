@@ -10,6 +10,7 @@ import iconPrevius from "../../public/images/icon-previous.svg";
 import iconResta from "../.././public/images/icon-minus.svg"
 import iconSuma from "../../public/images/icon-plus.svg";
 import iconCart from "../../public/images/icon-cart.svg";
+import iconClose from "../../public/images/icon-close.svg"
 import { useState } from "react";
 
 const Collections = () => {
@@ -25,6 +26,8 @@ const Collections = () => {
     setCantidad(cantidad + 1)
   }
 
+  const [isOpen, setIsOpen] = useState(false)
+
   return(
     <div className="container__collections">
       <Navbar />
@@ -33,14 +36,14 @@ const Collections = () => {
         <section className="section__img">
           <article className="img__principal">
             <img className="icon__slider icon__next" src={iconNext}/>
-            <img className="icon__slider icon__previous" src={iconPrevius}/>
             <img src={imgPrincipal}/>
+            <img className="icon__slider icon__previous" src={iconPrevius}/>
           </article>
           <article className="img__pequeñas">
-            <img src={imgPequeña1}/>
-            <img src={imgPequeña2}/>
-            <img src={imgPequeña3}/>
-            <img src={imgPequeña4}/>
+            <img onClick={() => setIsOpen(!isOpen)} src={imgPequeña1}/>
+            <img  onClick={() => setIsOpen(!isOpen)} src={imgPequeña2}/>
+            <img  onClick={() => setIsOpen(!isOpen)} src={imgPequeña3}/>
+            <img  onClick={() => setIsOpen(!isOpen)} src={imgPequeña4}/>
           </article>
         </section>
         <section className="section__texto">
@@ -65,6 +68,20 @@ const Collections = () => {
             </button>
           </div>
         </section>
+        <section className={`container__modal ${isOpen ? "open" : ""}`}>
+          <div className="container__modal--imgGrande">
+            <img onClick={() => setIsOpen(!isOpen)} className="icon__close"  src={iconClose} alt="Icono Close"/>
+            <img className="imgGrande" src={imgPrincipal} alt="Imagen grande"/>
+            <img className="icon__previus" src={iconPrevius} alt="Icono Previo"/>
+           <img className="icon__next" src={iconNext} alt="Icono Next"/>
+         </div>
+        <div className="container__modal--imgPequeña">
+          <img src={imgPequeña1} alt="Imagen Pequeña"/>
+          <img src={imgPequeña2} alt="Imagen Pequeña"/>
+          <img src={imgPequeña3} alt="Imagen Pequeña"/>
+          <img src={imgPequeña4} alt="Imagen Pequeña"/>
+        </div>
+       </section>
       </main>
     </div>
   )

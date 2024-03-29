@@ -133,8 +133,72 @@ main {
   color: white;
 }
 
+/* Section Modal */
+.container__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 998;
+}
+
+.container__modal.open {
+  display: flex;
+}
+
+.container__modal--imgGrande {
+  position: absolute;
+  width: 60%;
+  height: 60vh;
+  margin-top: 2rem;
+  z-index: 998;
+}
+
+.container__modal--imgGrande .imgGrande {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container__modal--imgPequeña {
+  margin-top: 25rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.container__modal--imgPequeña img{
+  width: 120px;
+  border-radius: 5px;
+}
 
 
+
+.icon__next {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  right: 0.5rem;
+  top: 10rem;
+  background-color: white;
+}
+.icon__previus {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  left: 0.5rem;
+  top: 10rem;
+  background-color: white;
+}
 
 
 @media screen and (max-width: 760px) {
@@ -155,13 +219,13 @@ main {
   }
 
   .section__img {
+    position: absolute;
     width: 100%;
-    margin: 0;
+    margin: 1rem;
+    top: 0;
   }
 
   .img__principal {
-    position: absolute;
-    top: 0rem;
     width: 100%;
     height: 50vh;
   }
@@ -171,7 +235,7 @@ main {
   }
 
   .section__img .icon__slider {
-    display: block;
+    display: flex;
     width: 35px;
     height: 35px;
     padding: 2px;
@@ -180,14 +244,15 @@ main {
   }
 
   .section__img .icon__next {
-    position: relative;
-    left: 18rem;
-    top: 10rem;
+    position: sticky;
+    left: 40rem;
+    top: 10.5rem;
+    margin-right: 1rem;
   }
 
   .section__img .icon__previous {
     position: relative;
-    top: 8rem;
+    top: -8rem;
     left: 1rem;
   }
 
