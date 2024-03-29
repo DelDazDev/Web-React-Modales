@@ -72,7 +72,7 @@ main {
   }
   h1 {
     font-size: 2rem;
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
   }
 }
 
@@ -262,10 +262,9 @@ main {
   /* Section Texto */
   .section__texto {
     width: 100%;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
     padding-left: 1rem;
     flex-direction: column;
-    padding-bottom: 2rem;
   }
   .section__texto--price {
     width: 100%;
@@ -289,5 +288,6 @@ main {
   .section__texto--addCard .btn__cart {
     width: 90%;
     padding: 10px ;
+    margin-bottom: 1rem;
   }
 }
