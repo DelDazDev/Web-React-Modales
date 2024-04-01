@@ -2,7 +2,7 @@
   width: 90%;
   height: 90vh;
   margin: 1.5rem auto;
-  background-color: white;
+  background-color: rgb(251, 246, 246);
 }
 
 
@@ -241,6 +241,7 @@ main {
     padding: 2px;
     border-radius: 50%;
     background-color: white;
+    z-index: 998;
   }
 
   .section__img .icon__next {

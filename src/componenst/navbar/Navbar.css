@@ -54,6 +54,11 @@ header nav ul li a {
 
 .imgAvatar {
   width: 30px;
+  cursor: pointer;
+}
+
+.imgCarrito {
+  cursor: pointer;
 }
 
 header nav.open {
