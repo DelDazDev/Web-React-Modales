@@ -12,6 +12,7 @@ import iconSuma from "../../public/images/icon-plus.svg";
 import iconCart from "../../public/images/icon-cart.svg";
 import iconClose from "../../public/images/icon-close.svg"
 import { useState } from "react";
+import ModalSlider from "../componenst/modal/ModalSlider";
 
 const Collections = () => {
 
@@ -26,7 +27,9 @@ const Collections = () => {
     setCantidad(cantidad + 1)
   }
 
-  const [isOpen, setIsOpen] = useState(false)
+
+  const [estaAbierto, setEstaAbierto] = useState(false);
+  const [modalAbierta, setModalAbierta] = useState(false);
 
 
   return(
@@ -34,19 +37,21 @@ const Collections = () => {
       <Navbar />
       <hr />
       <main>
+        {/* Seccion Imagenes */}
         <section className="section__img">
           <article className="img__principal">
             <img className="icon__slider icon__next" src={iconNext}/>
-            <img src={imgPrincipal}/>
+            <img onClick={() => setModalAbierta(!modalAbierta)} src={imgPrincipal}/>
             <img className="icon__slider icon__previous" src={iconPrevius}/>
           </article>
           <article className="img__pequeñas">
-            <img onClick={() => setIsOpen(!isOpen)} src={imgPequeña1}/>
-            <img  onClick={() => setIsOpen(!isOpen)} src={imgPequeña2}/>
-            <img  onClick={() => setIsOpen(!isOpen)} src={imgPequeña3}/>
-            <img  onClick={() => setIsOpen(!isOpen)} src={imgPequeña4}/>
+            <img onClick={() => setModalAbierta(!modalAbierta)} src={imgPequeña1}/>
+            <img  onClick={() => setModalAbierta(!modalAbierta)} src={imgPequeña2}/>
+            <img  onClick={() => setModalAbierta(!modalAbierta)} src={imgPequeña3}/>
+            <img  onClick={() => setModalAbierta(!modalAbierta)} src={imgPequeña4}/>
           </article>
         </section>
+        {/* Seccion Texto */}
         <section className="section__texto">
           <h2> Sneaker Company</h2>
           <h1> Fall Limited Edition<br /> Sneakers</h1>
@@ -69,7 +74,8 @@ const Collections = () => {
             </button>
           </div>
         </section>
-        <section className={`container__modal ${isOpen ? "open" : ""}`}>
+        {/* Modal Slider Imagenes */}
+        {/*<section className={`container__modal ${isOpen ? "open" : ""}`}>
           <div className="container__modal--imgGrande">
             <img onClick={() => setIsOpen(!isOpen)} className="icon__close"  src={iconClose} alt="Icono Close"/>
             <img className="imgGrande" src={imgPrincipal} alt="Imagen grande"/>
@@ -82,7 +88,8 @@ const Collections = () => {
           <img src={imgPequeña3} alt="Imagen Pequeña"/>
           <img src={imgPequeña4} alt="Imagen Pequeña"/>
         </div>
-       </section>
+      </section>*/}
+      <ModalSlider estaAbierto={modalAbierta} modalCerrada={() => setModalAbierta(false)}/>
       </main>
     </div>
   )

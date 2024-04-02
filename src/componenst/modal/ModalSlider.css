@@ -1,0 +1,55 @@
+.carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(141, 138, 138, 0.8);
+}
+
+.carousel img {
+  position: relative;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.carousel .icon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  z-index: 999;
+  color: white;
+}
+
+.carousel .icon__der {
+  top: 14rem;
+  left: 25rem;
+}
+.carousel .icon__izq {
+  top: 14rem;
+  right: 25rem;
+}
+
+.carousel .icon__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 26rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.container__modalesPequeñas {
+ display: flex;
+ gap: 1.1rem;
+ margin-top: 1rem;
+}
+
+.container__modalesPequeñas img{
+  width: 82px;
+}

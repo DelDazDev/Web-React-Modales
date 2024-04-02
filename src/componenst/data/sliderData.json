@@ -1,0 +1,24 @@
+{
+  "slides": [
+    {
+      "src": "image-product-1.jpg",
+      "srcPequeña": "../../public/images/image-product-1-thumbnail.jpg",
+      "alt": "Image Producto 1"
+    },
+    {
+      "src": "../../../public/images/image-product-2.jpg",
+      "srcPequeña": "../../public/images/image-product-2-thumbnail.jpg",
+      "alt": "Image Producto 2"
+    },
+    {
+      "src": "public/images/image-product-3.jpg",
+      "srcPequeña": "../../public/images/image-product-3-thumbnail.jpg",
+      "alt": "Image Producto 3"
+    },
+    {
+      "src": "./public/images/image-product-4.jpg",
+      "srcPequeña": "../../public/images/image-product-4-thumbnail.jpg",
+      "alt": "Image Producto 4"
+    }
+  ]
+}
